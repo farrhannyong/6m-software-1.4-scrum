@@ -8,21 +8,36 @@
 
 // Task: Add code here
 
+class BaseSignal {
+    constructor() {
+        if (this.constructor === BaseSignal) {
+            throw new Error("This class cannot be instantiated directly.");
+        }
+    }
+
+    send() {
+        console.log(`Sending ${this.constructor.name.toLowerCase()} signal`);
+    }
+}
+
 class TvSignal extends BaseSignal {
     constructor(){
         // Add code here
+        super();
     }
 }
 
 class AirconSignal extends BaseSignal {
     constructor(){
         // Add code here
+        super();
     }
 }
 
 class DoorSignal extends BaseSignal {
     constructor(){
         // Add code here
+        super();
     }
 }
 
